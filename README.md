@@ -20,7 +20,7 @@ O site exibe pacotes de viagens, detalhes de passeios e navegação fluida entre
 
 - **React**
 - **React Router**
-- **JavaScript **
+- **JavaScript**
 - **HTML5**
 - **CSS3**
 - **SCSS (Sass)**

@@ -1,0 +1,105 @@
+@import './abstracts//variables.scss';
+@import './abstracts/mixins.scss';
+
+.footer {
+  background-color: $color-grey-dark-2;
+  padding: 10rem 0;
+  font-size: 1.4rem;
+  width: 100%;
+
+  @include respond(tab-port) {
+    padding: 8rem 0;
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    @include respond(tab-port) {
+      @include flexRow;
+    }
+  }
+
+  &-logo-box {
+    text-align: center;
+    margin-bottom: 8rem;
+
+    @include respond(tab-port) {
+      margin-bottom: 6rem;
+    }
+  }
+
+  &-logo {
+    width: 15rem;
+    height: auto;
+  }
+
+  &-navigation {
+    border-top: 1px solid $color-grey;
+    padding-top: 2rem;
+    display: inline-block;
+
+    @include respond(tab-port) {
+      width: 80%;
+      text-align: center;
+      margin: 0 auto 6rem;
+    }
+  }
+
+  &-list {
+    list-style: none;
+  }
+
+  &-item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &-link {
+
+    &:link, &:visited {
+      background-color: $color-grey-dark-2;
+      color: $color-grey-light-1;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
+      transition: all .2s;
+    }
+
+    &:hover, &:active {
+      color: $color-primary;
+      box-shadow: 0 1rem 2rem rgba($color-black, .4);
+      transform: scale(1.1);
+    }
+    
+  }
+
+  &-copyright {
+    border-top: 1px solid $color-grey;
+    padding-top: 2rem;
+    width: 65%;
+    float: right;
+    text-align: center;
+
+
+    @include respond(tab-port) {
+      width: 80%;
+      float: none;
+      margin: auto;
+      
+    }
+  }
+}
+
+.col-1-of-2 {
+  width: calc((100% - 20rem)/2);
+  text-align: center;
+
+  @include respond(tab-port) {
+    width: 100%;
+  }
+}
